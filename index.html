@@ -8,29 +8,42 @@
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
   <style>
-    /* Ensure full-screen rendering */
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: black;
-    }
-
-    #unity-container {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-    }
-
-    #unity-canvas {
-      width: 100% !important;
-      height: 100% !important;
-    }
+      /* Ensure full-screen rendering */
+      html, body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background: black;
+      }
+      #unity-container {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+      }
+      #unity-canvas {
+          width: 100% !important;
+          height: 100% !important;
+      }
+      /* Fullscreen button for Firefox and Safari */
+      #browser-fullscreen-button {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          z-index: 100;
+          padding: 8px 16px;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: white;
+          border: 1px solid white;
+          border-radius: 4px;
+          cursor: pointer;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          display: none; /* Hidden by default, shown only for Firefox/Safari */
+      }
   </style>
 </head>
 
@@ -84,11 +97,11 @@
     }
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/Build_v3.loader.js";
+    var loaderUrl = buildUrl + "/Build_v4.loader.js";
     var config = {
-      dataUrl: buildUrl + "/Build_v3.data",
-      frameworkUrl: buildUrl + "/Build_v3.framework.js",
-      codeUrl: buildUrl + "/Build_v3.wasm",
+      dataUrl: buildUrl + "/Build_v4.data",
+      frameworkUrl: buildUrl + "/Build_v4.framework.js",
+      codeUrl: buildUrl + "/Build_v4.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "RushXR",
       productName: "VillaSim",
